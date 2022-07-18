@@ -7,6 +7,7 @@ const removeSelection = (ratingsList) => {
 }
 
 const selectRating = ({target}) => {
+	btnSubmit.removeAttribute('disabled');
 	selectedRating = target.innerText;
 	removeSelection(ratingsList);
 	target.classList.toggle('ratings__rating__selected');

@@ -27,6 +27,9 @@ body{
 }
 
 .rating-component{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
 	width: 430px;
 	height: 430px;
 	background-color: var(--dark-blue);
@@ -35,6 +38,7 @@ body{
 }
 
 .rating-component__star-icon{
+	min-height: 48px;
 	width: 48px;
 	height: 48px;
 	background: rgba(0,0,0,10%);
@@ -128,6 +132,16 @@ body{
 .rating-component__button:hover{
 	color: var(--orange);
 	background: var(--white);
+	cursor: pointer;
+}
+
+.rating-component__button:disabled{
+	background: var(--medium-grey);
+}
+
+.rating-component__button:disabled:hover{
+	color: var(--white);
+	cursor: not-allowed;
 }
 
 @media (max-width: 600px){
